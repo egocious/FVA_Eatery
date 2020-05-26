@@ -1,0 +1,84 @@
+{% extends 'eatery/main.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<div class="row">
+    {% for menutable in menutables %}
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/imagesbanana.jpg'%}">
+        <div class="box-element product">
+            <h6><strong>{{menutable.name}}</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: block; float: right "><strong>NG{{menutable.price|floatformat:2}}</strong></h4>
+        </div>
+    </div>
+    {% endfor %}
+    
+  
+    <div class="col-lg-4">
+        <img  class="thumbnail" src="{% static 'images/imagesbroccoli.jpg'%}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: block; float: right;">NG12</h4>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/imageschips.jpg'%}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: block; float: right;">NG55</h4>
+        </div>
+    </div>
+
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'images/imageswinebottle.jpg'%}">
+            <div class="box-element product">
+                <h6><strong>Product</strong></h6>
+                <hr>
+                <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: block; float: right;">NG72</h4>
+            </div>
+
+    </div>
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/imageswinebottle.jpg'%}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+        <h4 style="display: block; float: right;">NG72</h4>
+        </div>
+
+</div>
+<div class="col-lg-4">
+    <img class="thumbnail" src="{% static 'images/imageswinebottle.jpg'%}">
+    <div class="box-element product">
+        <h6><strong>Product</strong></h6>
+        <hr>
+        <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+        <a class="btn btn-outline-success" href="#">View</a>
+    <h4 style="display: block; float: right;">NG72</h4>
+    </div>
+
+</div>
+
+</div>
+
+
+{% endblock content %}
+
+
+

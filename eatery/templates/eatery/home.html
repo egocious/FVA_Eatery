@@ -1,0 +1,46 @@
+{% extends 'eatery/main.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<section class="authContainer">
+    <div>
+        <img class="logo" src="https://res.cloudinary.com/partypack/image/upload/v1568749601/Frame_1_1_tzgejy.png"/> 
+        <p class="welcomeMessage">Welcome Back, Please log into your account</p>
+    </div>
+
+
+
+<form  method="post" >
+        <p>-OR-</p>                
+        <label for="email-label" id="email">Email Address</label>
+        <br>
+        <input type="text" id="email-label" name="email-add" placeholder="Enter valid email"  required>
+        <br><br>
+        <label for="password-label" id="password">Password</label>
+        <br>
+        <input type="text" id="password-label" name="password_name" placeholder="********************" minlength="8" maxlength="14" required>
+        <br>
+
+    <div class="checkbox">                 
+        <label for="remember-me">
+        <input id="remember-me" type="checkbox" name="remember" value="Remember me">Remember me</label>
+        <p><a href="">Forgot Password?</a></p>                
+    </div>
+
+        <input class="button"  type="submit" value="Log In">
+        
+</form>
+<footer>
+        <p class="footer-star">Need a FVA Eate account?<a href="#">    Create an account?</a></p>
+        <p>&copy 2019 All Rights Reserved. Team Star</p>
+        <p>Cookie Preference,<a href="#"> Privacy Policy</a>,<a href="#"> Terms and Conditions</a></p>
+</footer>
+</section>
+
+
+
+
+
+{% endblock content%}
