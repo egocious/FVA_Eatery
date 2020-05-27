@@ -14,7 +14,7 @@
             
         </head>
         <body>
-            {% load crispy_forms_tags %}
+           
             <nav class="navbar">
                 <ul>
                     <li>FVA Eatery</li>
@@ -31,7 +31,7 @@
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join Today</legend>
-                {{ form|crispy}}
+                {{ form}}
                 
             </fieldset>
             <div class="form-group">
