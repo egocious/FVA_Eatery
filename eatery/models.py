@@ -6,8 +6,8 @@ from datetime import datetime
 class VendorTable(models.Model):
     eid =models.CharField(max_length = 10)
     businessName =models.CharField(max_length = 30, blank=False)
-    email = models.EmailField(max_length = 50)
-    phoneNumber =models.IntegerField(blank=False) 
+    email = models.EmailField(max_length = 30)
+    phoneNumber =models.CharField(max_length = 30, blank=False) 
     dateTimeCreated =models.DateTimeField()#*DateField
 
     class Meta:
@@ -20,8 +20,8 @@ class CustomerTable(models.Model):
     eid =models.CharField(max_length = 10)
     fistname =models.CharField(max_length = 30, blank=False)
     lastname = models.CharField(max_length = 30, blank=False)
-    email = models.EmailField(max_length = 50, blank=False) 
-    phoneNumber =models.CharField(max_length = 50, blank=False) 
+    email = models.EmailField(max_length = 30, blank=False) 
+    phoneNumber =models.CharField(max_length = 30, blank=False) 
     dateTimeCreated =models.DateTimeField(max_length = 30)#*DateField
     amountOutstanding =models.FloatField()
     class Meta:
@@ -32,7 +32,7 @@ class CustomerTable(models.Model):
 
 class AuthTable(models.Model):
     eid =models.CharField(max_length = 10)
-    email = models.EmailField(max_length = 50, blank=False)
+    email = models.EmailField(max_length = 30, blank=False)
     password =models.CharField(max_length = 30, blank=False) 
     dateTimeCreated =models.DateTimeField()#*DateField
 
@@ -63,8 +63,8 @@ class OrderStatus(models.Model):
         return self.eid
 
 class OrderTable(models.Model):
-    eid = models.CharField(max_length = 50)
-    customerid  = models.CharField(max_length = 70, blank=True) 
+    eid = models.CharField(max_length = 10)
+    customerid  = models.CharField(max_length = 30, blank=True) 
     vendorid =models.ForeignKey(VendorTable, default= 1, on_delete = models.SET_DEFAULT) 
     description= models.TextField()
     itemsOrdered  =models.ForeignKey(MenuTable, default= 1, on_delete = models.SET_DEFAULT)     
@@ -80,14 +80,14 @@ class OrderTable(models.Model):
 
 
 class MessageStatus(models.Model):
-    eid = models.CharField(max_length = 50)
-    name =models.CharField(max_length = 70)
+    eid = models.CharField(max_length = 30)
+    name =models.CharField(max_length = 30)
 
     def __str__(self):
         return self.eid
 
 class NotificationsTable(models.Model):
-    eid = models.CharField(max_length = 50)
+    eid = models.CharField(max_length = 30)
     subjectuser = models.CharField(max_length = 30)
     orderid =models.ForeignKey(VendorTable, default= 1, on_delete = models.SET_DEFAULT ) 
     orderid =models.ForeignKey(CustomerTable, default= 1, on_delete = models.SET_DEFAULT ) 
